@@ -2,7 +2,7 @@
 #include <assert.h>
 
 // Function to count even and odd numbers in an array
-void count_even_odd(const int arr[], int size, int *even_count, int *odd_count) {
+int count_even_odd(const int arr[], int size, int *even_count, int *odd_count) {
     *even_count = 0;
     *odd_count = 0;
 
@@ -13,6 +13,7 @@ void count_even_odd(const int arr[], int size, int *even_count, int *odd_count) 
             (*odd_count)++;
         }
     }
+    return 0;
 }
 
 int main() {
