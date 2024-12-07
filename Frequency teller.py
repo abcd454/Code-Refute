@@ -1,6 +1,6 @@
 def digit_frequency(num):
     if num < 0:
-        num = -num  # Handle negative numbers
+        num = -num  # Handle Negative numbers
     freq = [0] * 10
 
     while num > 0:
