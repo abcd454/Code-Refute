@@ -19,14 +19,17 @@ int longest_equal_sequence(const int arr[], int size) {
 }
 
 int main() {
+    // Test cases
     int arr1[] = {1, 2, 2, 3, 3, 3};
     int arr2[] = {5, 5, 5, 5};
     int arr3[] = {1, 2, 3, 4, 5};
     int arr4[] = {};
+    int arr5[] = {1,2,1,2,1,3}
 
-    printf("Test Case 1: Array = {1, 2, 2, 3, 3, 3}, Output: %d\n", longest_equal_sequence(arr1, 6)); // Expected: 3
-    printf("Test Case 2: Array = {5, 5, 5, 5}, Output: %d\n", longest_equal_sequence(arr2, 4));     // Expected: 4
-    printf("Test Case 3: Array = {1, 2, 3, 4, 5}, Output: %d\n", longest_equal_sequence(arr3, 5)); // Expected: 1
-    printf("Test Case 4: Array = {}, Output: %d\n", longest_equal_sequence(arr4, 0));             // Expected: 0
+    printf("Test Case 1: Array = {1, 2, 2, 3, 3, 3}, Output: %d\n", longest_equal_sequence(arr1, 6));  // Expected: 3
+    printf("Test Case 2: Array = {5, 5, 5, 5}, Output: %d\n", longest_equal_sequence(arr2, 4));  // Expected: 4
+    printf("Test Case 3: Array = {1, 2, 3, 4, 5}, Output: %d\n", longest_equal_sequence(arr3, 5));  // Expected: 1
+    printf("Test Case 4: Array = {}, Output: %d\n", longest_equal_sequence(arr4, 0));  // Expected: 0
+    printf("Test Case 1: Array = {1, 2, 1, 2, 1, 3}, Output: %d\n", longest_equal_sequence(arr5, 6));
     return 0;
 }
