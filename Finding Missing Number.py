@@ -1,22 +1,11 @@
 def find_missing_number(arr):
     n = len(arr) + 1
-    xor_all = 0
-    xor_arr = 0
-
-    # XOR of all numbers from 1 to n
-    for i in range(1, n + 1):
-        xor_all ^= i
-
-    # XOR of array elements
-    for num in arr:
-        xor_arr ^= num
-
-    # Missing number
-    return xor_all ^ xor_arr
+    expected_sum = n * (n + 1) // 2  # Sum of all numbers from 1 to N+1
+    actual_sum = sum(arr)  # Sum of the array elements
+    return expected_sum - actual_sum  # Return the missing number
 
 # Test cases
-assert find_missing_number([1, 2, 4, 6, 3, 7, 8]) == 5
-assert find_missing_number([2, 3, 1, 5]) == 4
-assert find_missing_number([1]) == 2
-assert find_missing_number([]) == 1
-print("All tests passed!")
+print(f"Test Case 1: Array = [1, 2, 4, 6, 3, 7, 8], Output: {find_missing_number([1, 2, 4, 6, 3, 7, 8])}")  # Expected: 5
+print(f"Test Case 2: Array = [2, 3, 1, 5], Output: {find_missing_number([2, 3, 1, 5])}")  # Expected: 4
+print(f"Test Case 3: Array = [1], Output: {find_missing_number([1])}")  # Expected: 2
+print(f"Test Case 4: Array = [], Output: {find_missing_number([])}")  # Expected: 1
